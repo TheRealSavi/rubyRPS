@@ -16,6 +16,17 @@ Choices = {
   3 => "scissors"
 }
 
+def Restart()
+  $ai.ChangeChoice(Choices[rand 1..3])
+  puts "Ai chose " + $ai.choice
+  puts
+  puts "Rock, Paper, or Scissors?"
+  print "Choice:"
+  $me.ChangeChoice(gets.chomp())
+  puts
+  Checker()
+end
+
 def Decide()
   puts
   if ($me.choice == "rock" && $ai.choice == "scissors") || ($me.choice == "paper" && $ai.choice == "rock") || ($me.choice == "scissors" && $ai.choice == "paper")
@@ -25,6 +36,7 @@ def Decide()
   else
     puts "You lose!"
   end
+  Restart()
 end
 
 def Checker()
