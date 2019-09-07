@@ -18,7 +18,7 @@ Choices = {
 
 def Restart()
   $ai.ChangeChoice(Choices[rand 1..3])
-  puts "Ai chose " + $ai.choice
+  #puts "Ai chose " + $ai.choice
   puts
   puts "Rock, Paper, or Scissors?"
   print "Choice:"
@@ -48,7 +48,7 @@ def Checker()
   when "scissors"
     puts "scissors, the weapon of gay fags"
   else
-    puts "choose a fucking option buddy"
+    puts "choose a fucking option fucktard"
     NewChoice()
     return
   end
@@ -65,7 +65,7 @@ end
 
 def Game()
   $ai = Player.new(Choices[rand 1..3])
-  puts "Ai chose " + $ai.choice
+  #puts "Ai chose " + $ai.choice
   puts
   puts "Rock, Paper, or Scissors?"
   print "Choice:"
