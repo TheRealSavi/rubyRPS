@@ -29,6 +29,8 @@ end
 
 def Decide()
   puts
+  puts "AI chose " + $ai.choice
+  puts
   if ($me.choice == "rock" && $ai.choice == "scissors") || ($me.choice == "paper" && $ai.choice == "rock") || ($me.choice == "scissors" && $ai.choice == "paper")
     puts "You win!"
   elsif $me.choice == $ai.choice
@@ -63,15 +65,10 @@ def NewChoice()
   Checker()
 end
 
-def Game()
+def Build()
   $ai = Player.new(Choices[rand 1..3])
-  #puts "Ai chose " + $ai.choice
-  puts
-  puts "Rock, Paper, or Scissors?"
-  print "Choice:"
-  $me = Player.new(gets.chomp())
-  puts
-  Checker()
+  $me = Player.new(Choices[rand 1..3])
 end
 
-Game()
+Build()
+Restart()
